@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100vw;
+      min-height: 100vh;
+      font-family: "EXO", Arial, sans-serif;
+      background-color: #557;
+      display: grid;
+      place-content: center;
+      color: #fff;
+      padding: 1rem;
+    }
+
+    .target {
+      width: 100%;
+      display: grid;
+      grid-template-columns: minmax(0,1fr) max-content;
+      align-items: center;
+      border: 2px dashed #fff;
+      padding: 0.5rem;
+      animation: resize 12s linear infinite;
+      gap: 1rem;
+      border-radius: 0.25em;
+    }
+
+    .target__title {
+      overflow: hidden;
+      min-width: 0;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding: 5px;
+    }
+
+    .target__emoji {
+      font-size: 2rem;
+    }
+
+    @keyframes resize {
+      0% {
+        max-width: 100%;
+      }
+
+      50% {
+        max-width: 50%;
+      }
+
+      100% {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="target">
+    <div class="target__title">
+      <strong>Grid Layout:</strong> Text here is very very long that it might get truncate if this box get resized too small
+    </div>
+    <div class="target__emoji">🎃</div>
+  </div>
+</body>
+</html>
