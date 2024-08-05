@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: #557;
+      font-family: "Exo", "Bungee Shade", cursive, Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      vertical-align: top;
+    }
+
+    ul {
+      list-style: none outside none;
+    }
+    
+    main,aside {
+      background-color: #f4f4f4;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+      overflow: hidden;
+      resize: horizontal;
+    }
+
+    .section__heading {
+      display: flex;
+      align-items: center;
+      color: #333;
+      margin-bottom: 24px;
+    }
+
+    .section__title {
+      font-size: 32px;
+      font-weight: 500;
+    }
+
+    .cards {
+      --gap: 18px;
+      --minwidth: 220px;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(min(100%,var(--minwidth)),1fr));
+      gap: var(--gap);
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card__media {
+      position: relative;
+      border-radius: 12px 12px 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px;
+      min-height: 220px;
+    }
+
+    .card__media .card__badge {
+      position: absolute;
+      background-image: linear-gradient(90deg,#ff5000 0%,#ff0552 99%);
+      border-radius: 4px;
+      color: #fff;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2px 4px;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1;
+      left: 20px;
+      top: 20px;
+    }
+
+    .card__content {
+      display: flex;
+      flex-direction: column;
+      padding: 0 14px 24px;
+    }
+
+    .card__title {
+      font-weight: 500;
+      font-size: 24px;
+      color: #333333;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 8px;
+    }
+
+    .card__des {
+      font-size: 14px;
+      color: #ba9663;
+    }
+
+    .aside {
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    aside h1 {
+      margin: 0;
+    }
+
+    nav {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit,minmax(min(250px,100%),1fr));
+    }
+
+    nav a {
+      display: block;
+      padding: 10px 0;
+      text-decoration: none;
+      font-size: clamp(1rem,1.25rem + 2vw,1.5rem);
+    }
+
+    body {
+      display: grid;
+      gap: 1rem;
+      grid-template-areas: 
+        "sidebar"
+        "main";
+    }
+
+    @media (min-width: 768px) {
+      body {
+        grid-template-columns: 250px 1fr;
+        grid-template-areas: "sidebar main";
+      }
+    }
+
+    aside {
+      grid-area: sidebar;
+    }
+
+    main {
+      grid-area: main;
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <h1>Logo</h1>
+    <nav>
+      <a href="">CSS</a>
+      <a href="">HTML</a>
+      <a href="">JavaScript</a>
+      <a href="">React</a>
+      <a href="">Vue</a>
+    </nav>
+  </aside>
+  <main>
+    <div class="section">
+      <div class="section__heading">
+        <h3 class="section_title">现代web布局</h3>
+      </div>
+      <div class="section__body">
+        <ul class="cards">
+          <li class="card">
+            <div class="card__media">
+              <img src="https://picsum.photos/222/?random=11" alt="">
+              <div class="card__badge">CSS</div>
+            </div>
+            <div class="card__content">
+              <div class="card__heading">
+                <h4 class="card__title">CSS Grid Layout</h4>
+              </div>
+              <div class="card__des">使用 CSS Grid 构建 Web 布局</div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__media">
+              <img src="https://picsum.photos/222/?random=12" alt="">
+              <div class="card__badge">CSS</div>
+            </div>
+            <div class="card__content">
+              <div class="card__heading">
+                <h4 class="card__title">CSS Grid Layout</h4>
+              </div>
+              <div class="card__des">使用 CSS Grid 构建 Web 布局</div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__media">
+              <img src="https://picsum.photos/222/?random=13" alt="">
+              <div class="card__badge">CSS</div>
+            </div>
+            <div class="card__content">
+              <div class="card__heading">
+                <h4 class="card__title">CSS Grid Layout</h4>
+              </div>
+              <div class="card__des">使用 CSS Grid 构建 Web 布局</div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__media">
+              <img src="https://picsum.photos/222/?random=14" alt="">
+              <div class="card__badge">CSS</div>
+            </div>
+            <div class="card__content">
+              <div class="card__heading">
+                <h4 class="card__title">CSS Grid Layout</h4>
+              </div>
+              <div class="card__des">使用 CSS Grid 构建 Web 布局</div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__media">
+              <img src="https://picsum.photos/222/?random=15" alt="">
+              <div class="card__badge">CSS</div>
+            </div>
+            <div class="card__content">
+              <div class="card__heading">
+                <h4 class="card__title">CSS Grid Layout</h4>
+              </div>
+              <div class="card__des">使用 CSS Grid 构建 Web 布局</div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__media">
+              <img src="https://picsum.photos/222/?random=16" alt="">
+              <div class="card__badge">CSS</div>
+            </div>
+            <div class="card__content">
+              <div class="card__heading">
+                <h4 class="card__title">CSS Grid Layout</h4>
+              </div>
+              <div class="card__des">使用 CSS Grid 构建 Web 布局</div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__media">
+              <img src="https://picsum.photos/222/?random=17" alt="">
+              <div class="card__badge">CSS</div>
+            </div>
+            <div class="card__content">
+              <div class="card__heading">
+                <h4 class="card__title">CSS Grid Layout</h4>
+              </div>
+              <div class="card__des">使用 CSS Grid 构建 Web 布局</div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__media">
+              <img src="https://picsum.photos/222/?random=18" alt="">
+              <div class="card__badge">CSS</div>
+            </div>
+            <div class="card__content">
+              <div class="card__heading">
+                <h4 class="card__title">CSS Grid Layout</h4>
+              </div>
+              <div class="card__des">使用 CSS Grid 构建 Web 布局</div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__media">
+              <img src="https://picsum.photos/222/?random=19" alt="">
+              <div class="card__badge">CSS</div>
+            </div>
+            <div class="card__content">
+              <div class="card__heading">
+                <h4 class="card__title">CSS Grid Layout</h4>
+              </div>
+              <div class="card__des">使用 CSS Grid 构建 Web 布局</div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__media">
+              <img src="https://picsum.photos/222/?random=20" alt="">
+              <div class="card__badge">CSS</div>
+            </div>
+            <div class="card__content">
+              <div class="card__heading">
+                <h4 class="card__title">CSS Grid Layout</h4>
+              </div>
+              <div class="card__des">使用 CSS Grid 构建 Web 布局</div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card__media">
+              <img src="https://picsum.photos/222/?random=21" alt="">
+              <div class="card__badge">CSS</div>
+            </div>
+            <div class="card__content">
+              <div class="card__heading">
+                <h4 class="card__title">CSS Grid Layout</h4>
+              </div>
+              <div class="card__des">使用 CSS Grid 构建 Web 布局</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
