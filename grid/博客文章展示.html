@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100vh;
+      font-family: "Exo", "Bungee Shade", cursive, Arial, sans-serif;
+      background-color: #557;
+      line-height: 1.65;
+      display: grid;
+      grid-template-columns: minmax(1rem,1fr) minmax(auto,70ch) minmax(1rem,1fr);
+    }
+
+    main {
+      background-color: #fefefe;
+      padding: 0 2rem 2rem;
+    }
+
+    aside > div {
+      background-color: #09f;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    main > div {
+      background-color: #f36;
+      padding: 10px;
+      color: #fff;
+      text-align: center;
+      margin-left: -2rem;
+      margin-right: -2rem
+    }
+
+    figure {
+      margin-left: 0;
+      margin-right: 0;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 0 1px 2px rgb(0 0 0 / 0.25);
+    }
+
+    figure img {
+      max-width: 100%;
+      border-radius: 4px;
+      object-fit: cover;
+      object-position: center;
+      mix-blend-mode: luminosity;
+      background-color: #09f;
+      background-image: linear-gradient(45deg,#c91616,#1556cf);
+      backdrop-filter: blur(15px) brightness(0.5);
+      display: block;
+      box-shadow: inset 0 0 10px 10px rgb(234 112 11 / 50%);
+    }
+
+    .size {
+      white-space: nowrap;
+      font-size: 12px;
+    }
+
+  </style>
+</head>
+<body>
+  <aside>
+    <div class="size">minmax(1rem,1fr)</div>
+    <!-- <div class="size"></div> -->
+  </aside>
+  <main>
+    <div class="size">minmax(auto,70ch)</div>
+    <h1>现代web布局</h1>
+    <p>minmax()的一个有趣的用例。使用它来创建文章布局。对于本例，内容水平居中。在移动端上，中间内容距离设备两端有1rem的间距！</p>
+    <figure>
+      <img src="https://loremflickr.com/1024/300/girls" alt="">
+    </figure>
+  </main>
+  <aside>
+    <div class="size">minmax(1rem,1fr)</div>
+    <!-- <div class="size"></div> -->
+  </aside>
+</body>
+</html>
