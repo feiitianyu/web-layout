@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      --limit-max-container-width: 65ch;
+      --limit-min-container-width: 23ch;
+      --gutter: 1rem;
+
+      min-height: 100vh;
+      background-color: #557;
+      font-family: "Exo", "Bungee Shade", cursive, Arial, sans-serif;
+      line-height: 1.65;
+      color: #fff;
+
+      display: grid;
+      align-content: start;
+      grid-template-columns:
+        [full_bleed-start] minmax(var(--gutter),1fr) [main-start] 
+        minmax(min(var(--limit-min-container-width),100% - var(--gutter) * 2),var(--limit-max-container-width)) 
+        [main-end] 
+        minmax(var(--gutter),1fr) [full_bleed-end];
+      row-gap: var(--gutter);
+    }
+
+    body > * {
+      grid-column: main-start / main-end;
+    }
+
+    .full_bleed {
+      width: 100%;
+      grid-column: full_bleed-start / full_bleed-end;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <h1>现代 Web 布局</h1>
+  <p>使用 CSS 网格布局构建 Web 经典布局，即 Full-Bleed 布局！</p>
+  <p>Meaning that a low-fi sketch doesn’t represent all details of the design you’re working ons.Meaning that a low-fi sketch doesn’t represent all details of the design you’re working ons.</p>
+  <section class="full_bleed">
+    <img src="https://picsum.photos/2568/600?random=1" width="2568" height="600" alt="" >
+  </section>
+  <p>Meaning that a low-fi sketch doesn’t represent all details of the design you’re working on, whereas a high-fi sketch is a muc.Meaning that a low-fi sketch doesn’t represent all details of the design you’re working ons.</p>
+</body>
+</html>
